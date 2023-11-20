@@ -1,6 +1,6 @@
-train: /content/Animal.v1i.yolov8/train/
-val: /content/Animal.v1i.yolov8/valid/
-test: /content/Animal.v1i.yolov8/test/
+train: /content/Animal.v1i.yolov8/train/images
+val: /content/Animal.v1i.yolov8/valid/images
+test: /content/Animal.v1i.yolov8/test/images
 
 nc: 5
 names: ['Crocodile', 'Fox', 'Giraffe', 'Panda', 'Raccoon']
