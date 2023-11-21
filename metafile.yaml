@@ -1,0 +1,44 @@
+Collections:
+  - Name: Faster R-CNN
+    Metadata:
+      Training Data: COCO
+      Training Techniques:
+        - SGD with Momentum
+        - Weight Decay
+      Training Resources: 8x V100 GPUs
+      Architecture:
+        - FPN
+        - RPN
+        - ResNet
+        - RoIPool
+    Paper:
+      URL: https://arxiv.org/abs/1506.01497
+      Title: "Faster R-CNN: Towards Real-Time Object Detection with Region Proposal Networks"
+    README: configs/faster_rcnn/README.md
+    Code:
+      URL: https://github.com/open-mmlab/mmdetection/blob/v2.0.0/mmdet/models/detectors/faster_rcnn.py#L6
+      Version: v2.0.0
+Models:
+  - Name: faster_rcnn_r50_caffe_c4_1x_coco
+    In Collection: Faster R-CNN
+    Config: configs/faster_rcnn/faster_rcnn_r50_caffe_c4_1x_coco.py
+    Metadata:
+      Epochs: 12
+    Results:
+      - Task: Object Detection
+        Dataset: COCO
+        Metrics:
+          box AP: 35.6
+    Weights: https://download.openmmlab.com/mmdetection/v2.0/faster_rcnn/faster_rcnn_r50_caffe_c4_1x_coco/faster_rcnn_r50_caffe_c4_1x_coco_20220316_150152-3f885b85.pth
+  - Name: faster_rcnn_r50_caffe_c4_mstrain_1x_coco
+    In Collection: Faster R-CNN
+    Config: configs/faster_rcnn/faster_rcnn_r50_caffe_c4_mstrain_1x_coco.py
+    Metadata:
+      Epochs: 12
+    Results:
+      - Task: Object Detection
+        Dataset: COCO
+        Metrics:
+          box AP: 35.9
+    Weights: https://download.openmmlab.com/mmdetection/v2.0/faster_rcnn/faster_rcnn_r50_caffe_c4_mstrain_1x_coco/faster_rcnn_r50_caffe_c4_mstrain_1x_coco_20220316_150527-db276fed.pth
+...
