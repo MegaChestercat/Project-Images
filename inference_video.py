@@ -1,5 +1,5 @@
 from mmdet.apis import inference_detector
-from .utils import get_model
+from content.utils import get_model
 import argparse
 import mmcv
 import cv2
